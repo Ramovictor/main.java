@@ -1,5 +1,4 @@
-import java.util.Map;
-import java.util.HashMap; 
+import java.util.*; 
     
 
 public class Mapa {
@@ -37,11 +36,26 @@ public class Mapa {
         //Atualização de preços
         produto.put("Calça", 100.00);
 
-        System.out.println("Novo preço do celular é: " + produto.get("Calça"));
+        System.out.println("Novo preço do Calça é: " + produto.get("Calça"));
 
-        
+        Set<String> nomes = new HashSet<>();
+        Scanner input = new Scanner(System.in);
 
-                             
+         nomes.add("Ramon");
+         nomes.add("João");
+         nomes.add("Pedro");
+         nomes.add("Gabriel");
+
+         System.out.println("Digite o nome: ");
+         String nome = input.nextLine();
+          
+         if (nomes.contains(nome)) {
+            System.out.println("Ja passou por aqui");
+         } else {
+            System.out.println("Acesso permitido");
+            nomes.add(nome);
+         }
+         input.close();
     }
 }
 

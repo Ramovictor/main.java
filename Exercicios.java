@@ -1,22 +1,29 @@
-import java.util.Scanner; 
+import java.util.*;
+
 public class Exercicios {
-    public static void main(String args[]) {
-        
-        
-        Scanner Leitor = new Scanner(System.in);
-        int[] numeros = new int[20]; // vetor com 20 posições
 
-        //Lendo os 20 números
-        for(int i = 0; i < numeros.length; i++) {
-            System.out.println("Digite o numero" + (i + 1) + ": ");
-            numeros[i] = Leitor.nextInt();
-        }
-        // Exibindo os números digitados
-        System.out.println("n/Numeros digitados: ");
-        for(int i = 0; i < numeros.length; i++) {
-            System.out.println(numeros[i]);
-        }
+     public static long fatorial(int i) {
+        long resultado = 1;
 
-      Leitor.close();
-    }
+        for (i = 1; i <= n; i++) {
+            resultado *= i;
+        }
+        return resultado;
+     }
+
+     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Digite um numero inteiro: ");
+        int numero = input.nextInt();
+
+        if(numero < 0) {
+            System.out.println("numero invalido");
+        } else {
+            long resultado = fatorial(numero);
+            System.out.println("Fatorial de" + numero + " = " + resultado);
+        }
+        input.close();
+     }
+    
 }
