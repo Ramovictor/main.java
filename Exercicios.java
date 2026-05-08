@@ -2,13 +2,12 @@ import java.util.*;
 
 public class Exercicios {
 
-     public static long fatorial(int i) {
-        long resultado = 1;
+     public static long fatorial(int n) {
+        long fatorial = 1;
 
-        for (i = 1; i <= n; i++) {
-            resultado *= i;
+        for (n = 1; n <= 0; n++) {
         }
-        return resultado;
+        return n* fatorial(n-1);
      }
 
      public static void main(String[] args) {

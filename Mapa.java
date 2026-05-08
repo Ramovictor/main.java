@@ -55,6 +55,8 @@ public class Mapa {
             System.out.println("Acesso permitido");
             nomes.add(nome);
          }
+
+         
          input.close();
     }
 }
